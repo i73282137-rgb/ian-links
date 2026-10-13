@@ -335,7 +335,7 @@
         <div class="status">seus links</div>
         <h1>Web_Up<span>.</span></h1>
       </header>
-      <nav class="links" aria-label="Links principais">
+      <nav class="links" id="linksNav" aria-label="Links principais">
         <!-- EDITE: substitua os # abaixo pelos seus links reais -->
         <a class="link-card" href="#" data-label="Instagram"
           ><span class="icon"
@@ -400,6 +400,35 @@
       </nav>
     </main>
     <script>
+      fetch("./links.json", { cache: "no-store" })
+        .then((response) => response.ok ? response.json() : Promise.reject())
+        .then((items) => {
+          const nav = document.querySelector("#linksNav");
+          nav.innerHTML = "";
+          items.forEach((item) => {
+            const link = document.createElement("a");
+            link.className = "link-card";
+            link.href = item.url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            const icon = document.createElement("span");
+            icon.className = "icon";
+            icon.textContent = "↗";
+            const copy = document.createElement("span");
+            copy.className = "copy";
+            const title = document.createElement("strong");
+            title.textContent = item.title;
+            const subtitle = document.createElement("small");
+            subtitle.textContent = item.subtitle || "";
+            copy.append(title, subtitle);
+            const arrow = document.createElement("span");
+            arrow.className = "arrow";
+            arrow.textContent = "↗";
+            link.append(icon, copy, arrow);
+            nav.append(link);
+          });
+        })
+        .catch(() => {});
       document.querySelectorAll(".link-card").forEach((card) => {
         card.addEventListener("pointermove", (event) => {
           const rect = card.getBoundingClientRect();
