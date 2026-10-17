@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "revision": "b8439313-73ac-4098-bd7b-497a24cbf0e3",
+  "profile": {
+    "name": "Web_Up.",
+    "bio": "Links, projetos e novidades da Web_Up.\nExplore abaixo ↓",
+    "instagram": "https://www.instagram.com/webupbr/"
+  },
+  "section": {
+    "title": "Acompanhe o que estamos construindo.",
+    "description": "Tudo da Web_Up em um só lugar."
+  },
+  "links": [
+    {
+      "id": "e0910e9c-dd3d-4292-bc69-0e01e2f27cbf",
+      "title": "IdeiaForge",
+      "subtitle": "Organize suas ideias, uma pergunta por vez.",
+      "url": "https://personalized-salvador-working-treatment.trycloudflare.com/",
+      "visible": true,
+      "mark": "03"
+    },
+    {
+      "id": "instagram",
+      "title": "Instagram",
+      "subtitle": "Acompanhe a Web_Up",
+      "url": "https://www.instagram.com/webupbr/",
+      "visible": true,
+      "mark": "ig"
+    },
+    {
+      "id": "fiado-em-dia",
+      "title": "Fiado em Dia",
+      "subtitle": "Conheça o projeto",
+      "url": "https://i73282137-rgb.github.io/mota-links/fiado-em-dia.html",
+      "visible": true,
+      "mark": "01"
+    }
+  ],
+  "contact": {
+    "title": "Vamos conversar?",
+    "description": "Entre em contato com a Web_Up.",
+    "label": "Fale comigo",
+    "subtitle": "Entre em contato pelo Instagram",
+    "url": "https://www.instagram.com/webupbr/"
+  }
+}
